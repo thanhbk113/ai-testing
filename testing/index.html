@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập</title>
+    <script>
+      function validateForm() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        if (username && password) {
+          window.location.href = "hello.html";
+          return false;
+        } else {
+          alert("Vui lòng nhập đầy đủ tài khoản và mật khẩu.");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Đăng Nhập</h2>
+    <form onsubmit="return validateForm()">
+      <label for="username">Tài khoản:</label><br />
+      <input type="text" id="username" name="username" /><br /><br />
+      <label for="password">Mật khẩu:</label><br />
+      <input type="password" id="password" name="password" /><br /><br />
+      <input type="submit" value="Đăng nhập" />
+    </form>
+  </body>
+</html>
